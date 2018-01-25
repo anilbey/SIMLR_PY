@@ -71,10 +71,13 @@ class SIMLR_LARGE(object):
         for i in range(n):
             t.add_item(i,GE_csc[i,:])
         t.build(100)
-        t.save('test.ann')
+        print('#######OS PROCESS ID#####')
+        print(str(os.getpid()))
+        ann_file = str(os.getpid())+'test.ann'
+        t.save(ann_file)
         u = AnnoyIndex(d)
-        u.load('test.ann')
-        os.remove('test.ann')
+        u.load(ann_file)
+        os.remove(ann_file)
         val = np.zeros((n,K))
         ind = np.zeros((n,K))
         for i in range(n):
