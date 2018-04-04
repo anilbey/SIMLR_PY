@@ -1,3 +1,8 @@
+## Fork Changelog
+- Python 3 import compatibility
+- Allowing parallel execution when invoked by a workflow management system (e.g. snakemake, nextflow)
+
+
 SIMLR 
 ============================================================
 This is a python implementation of the paper published in Nature Methods titled as "Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning".
